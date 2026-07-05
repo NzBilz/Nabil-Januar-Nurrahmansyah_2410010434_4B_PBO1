@@ -14,7 +14,7 @@ Berikut adalah bagian kode yang relevan dengan konsep OOP yang dijelaskan:
 
 1. **Class** adalah template atau blueprint dari object. Pada kode ini, `Karakter`, `KarakterRusher`, `KarakterSupport`, dan `Main` adalah contoh dari class.
 
-```java
+java
 public class Karakter {
     ...
 }
