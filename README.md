@@ -31,7 +31,7 @@ public class Main {
     ...
 }
 
-# Object adalah instance dari class. Pada kode ini, listKarakter[0] = new KarakterRusher("Alok", 200, "Drop the Beat"); adalah contoh pembuatan object.
+## Object adalah instance dari class. Pada kode ini, listKarakter[0] = new KarakterRusher("Alok", 200, "Drop the Beat"); adalah contoh pembuatan object.
 
 listKarakter[0] = new KarakterRusher("Alok", 200, "Drop the Beat");
 
