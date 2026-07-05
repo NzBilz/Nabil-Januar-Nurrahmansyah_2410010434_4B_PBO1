@@ -14,7 +14,7 @@ Berikut adalah bagian kode yang relevan dengan konsep OOP yang dijelaskan:
 
 1. **Class** adalah template atau blueprint dari object. Pada kode ini, `Karakter`, `KarakterRusher`, `KarakterSupport`, dan `Main` adalah contoh dari class.
 
-java
+```java
 public class Karakter {
     ...
 }
@@ -30,19 +30,27 @@ public class KarakterSupport extends Karakter {
 public class Main {
     ...
 }
+```
 
-## Object adalah instance dari class. Pada kode ini, listKarakter[0] = new KarakterRusher("Alok", 200, "Drop the Beat"); adalah contoh pembuatan object.
+## Object 
+adalah instance dari class. Pada kode ini, listKarakter[0] = new KarakterRusher("Alok", 200, "Drop the Beat"); adalah contoh pembuatan object.
 
+```
 listKarakter[0] = new KarakterRusher("Alok", 200, "Drop the Beat");
+```
+# Atribut 
+adalah variabel yang ada dalam class. Pada kode ini, nama, hp, and skillName adalah contoh atribut.
 
-# Atribut adalah variabel yang ada dalam class. Pada kode ini, nama, hp, and skillName adalah contoh atribut.
-
+```
 private String nama;
 private int hp;
 private String skillName;
+```
 
-# Constructor adalah method yang pertama kali dijalankan pada saat pembuatan object. Pada kode ini, constructor ada di dalam class Karakter, KarakterRusher, dan KarakterSupport.
+# Constructor 
+adalah method yang pertama kali dijalankan pada saat pembuatan object. Pada kode ini, constructor ada di dalam class Karakter, KarakterRusher, dan KarakterSupport.
 
+```
 public Karakter(String nama, int hp) {
     this.nama = nama;
     this.hp = hp;
@@ -52,15 +60,19 @@ public KarakterRusher(String nama, int hp, String skillName) {
     super(nama, hp);
     this.skillName = skillName;
 }
-
+```
+# Mutator
 Mutator atau setter digunakan untuk mengubah nilai dari suatu atribut. Pada kode ini, setHp adalah contoh method mutator.
 
+```
 public void setHp(int hp) {
     this.hp = hp;
 }
-
+```
+# Accessor 
 Accessor atau getter digunakan untuk mengambil nilai dari suatu atribut. Pada kode ini, getNama dan getHp adalah contoh method accessor.
 
+```
 public String getNama() {
     return nama;
 }
@@ -68,58 +80,71 @@ public String getNama() {
 public int getHp() {
     return hp;
 }
+```
+# Encapsulation
+adalah konsep menyembunyikan data dengan membuat atribut menjadi private dan hanya bisa diakses melalui method. Pada kode ini, atribut nama dan hp dienkapsulasi dan hanya bisa diakses melalui method getter dan setter.
 
-Encapsulation adalah konsep menyembunyikan data dengan membuat atribut menjadi private dan hanya bisa diakses melalui method. Pada kode ini, atribut nama dan hp dienkapsulasi dan hanya bisa diakses melalui method getter dan setter.
-
+```
 private String nama;
 private int hp;
+```
+# Inheritance
+adalah konsep di mana sebuah class bisa mewarisi property dan method dari class lain. Pada kode ini, KarakterRusher mewarisi Karakter dengan sintaks extends.
 
-Inheritance adalah konsep di mana sebuah class bisa mewarisi property dan method dari class lain. Pada kode ini, KarakterRusher mewarisi Karakter dengan sintaks extends.
-
+```
 public class KarakterRusher extends Karakter {
     ...
 }
+```
+# Polymorphism 
+adalah konsep di mana sebuah nama dapat digunakan untuk merujuk ke beberapa tipe atau bentuk objek berbeda. Ini memungkinkan metode-metode dengan nama yang sama untuk berperilaku berbeda tergantung pada tipe objek yang mereka manipulasi. Pada kode ini, method gunakanSkill() di KarakterRusher merupakan override dari method gunakanSkill() di class Karakter.
 
-Polymorphism adalah konsep di mana sebuah nama dapat digunakan untuk merujuk ke beberapa tipe atau bentuk objek berbeda. Ini memungkinkan metode-metode dengan nama yang sama untuk berperilaku berbeda tergantung pada tipe objek yang mereka manipulasi. Pada kode ini, method gunakanSkill() di KarakterRusher merupakan override dari method gunakanSkill() di class Karakter.
-
+```
 @Override
 public void gunakanSkill() {
     System.out.println("[SKILL RUSHER] " + getNama() + " mengaktifkan '" + skillName + "'! Kecepatan lari meningkat 20%!");
 }
+```
+# Seleksi
+adalah statement kontrol yang digunakan untuk membuat keputusan berdasarkan kondisi. Pada kode ini, digunakan seleksi if else untuk menentukan aksi berdasarkan nomor pilihan karakter yang dimasukkan oleh user.
 
-Seleksi adalah statement kontrol yang digunakan untuk membuat keputusan berdasarkan kondisi. Pada kode ini, digunakan seleksi if else untuk menentukan aksi berdasarkan nomor pilihan karakter yang dimasukkan oleh user.
-
+```
 if (pilihan >= 1 && pilihan <= 3) {
     ...
 } else {
     System.out.println("[!] Pilihan Anda salah. Zona tidak aman, karakter Anda tereliminasi!");
 }
+```
+# Perulangan
+adalah statement kontrol yang digunakan untuk menjalankan blok kode berulang kali. Pada kode ini, digunakan loop for untuk membaca indeks array dan menampilkan daftar pilihan karakter yang tersedia.
 
-Perulangan adalah statement kontrol yang digunakan untuk menjalankan blok kode berulang kali. Pada kode ini, digunakan loop for untuk membaca indeks array dan menampilkan daftar pilihan karakter yang tersedia.
-
+```
 for (int i = 0; i < listKarakter.length; i++) {
     System.out.print((i + 1) + ". ");
     listKarakter[i].infoKarakter();
 }
-
-Input Output Sederhana digunakan untuk menerima input dari user dan menampilkan output ke user. Pada kode ini, digunakan class Scanner untuk menerima input pilihan user dan method System.out.println untuk menampilkan output antarmuka game.
-
+```
+# Input Output Sederhana
+digunakan untuk menerima input dari user dan menampilkan output ke user. Pada kode ini, digunakan class Scanner untuk menerima input pilihan user dan method System.out.println untuk menampilkan output antarmuka game.
+```
 Scanner scanner = new Scanner(System.in);
 System.out.print("\nMasukkan nomor pilihan Anda (1-3): ");
 int pilihan = scanner.nextInt();
-
-Array adalah struktur data yang digunakan untuk menyimpan beberapa nilai dalam satu variabel. Pada kode ini, Karakter[] listKarakter = new Karakter[3]; adalah contoh penggunaan array objek untuk menampung berbagai tipe karakter game.
-
+```
+# Array
+adalah struktur data yang digunakan untuk menyimpan beberapa nilai dalam satu variabel. Pada kode ini, Karakter[] listKarakter = new Karakter[3]; adalah contoh penggunaan array objek untuk menampung berbagai tipe karakter game.
+```
 Karakter[] listKarakter = new Karakter[3];
-
-Error Handling digunakan untuk menangani error yang mungkin terjadi saat runtime. Pada kode ini, digunakan try catch untuk mengantisipasi kesalahan jika user salah memasukkan data non-angka pada menu pilihan.
-
+```
+# Error Handling
+digunakan untuk menangani error yang mungkin terjadi saat runtime. Pada kode ini, digunakan try catch untuk mengantisipasi kesalahan jika user salah memasukkan data non-angka pada menu pilihan.
+```
 try {
     // code that might throw an exception
 } catch (Exception e) {
     System.out.println("[ERROR] Terjadi kesalahan! Mohon masukkan angka pilihan yang valid!");
 }
-
+```
 ## Usulan nilai
 
 | No  | Materi         |  Nilai  |
