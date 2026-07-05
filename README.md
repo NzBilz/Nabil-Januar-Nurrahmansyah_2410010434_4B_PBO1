@@ -31,17 +31,17 @@ public class Main {
     ...
 }
 
-Object adalah instance dari class. Pada kode ini, listKarakter[0] = new KarakterRusher("Alok", 200, "Drop the Beat"); adalah contoh pembuatan object.
+# Object adalah instance dari class. Pada kode ini, listKarakter[0] = new KarakterRusher("Alok", 200, "Drop the Beat"); adalah contoh pembuatan object.
 
 listKarakter[0] = new KarakterRusher("Alok", 200, "Drop the Beat");
 
-Atribut adalah variabel yang ada dalam class. Pada kode ini, nama, hp, and skillName adalah contoh atribut.
+# Atribut adalah variabel yang ada dalam class. Pada kode ini, nama, hp, and skillName adalah contoh atribut.
 
 private String nama;
 private int hp;
 private String skillName;
 
-Constructor adalah method yang pertama kali dijalankan pada saat pembuatan object. Pada kode ini, constructor ada di dalam class Karakter, KarakterRusher, dan KarakterSupport.
+# Constructor adalah method yang pertama kali dijalankan pada saat pembuatan object. Pada kode ini, constructor ada di dalam class Karakter, KarakterRusher, dan KarakterSupport.
 
 public Karakter(String nama, int hp) {
     this.nama = nama;
