@@ -13,7 +13,13 @@ public class KarakterRusher extends Karakter {
     // 9. POLYMORPHISM (Method Overriding dari class Karakter)
     @Override
     public void gunakanSkill() {
-        System.out.println("[SKILL RUSHER] " + getNama() + " mengaktifkan '" + skillName + "'! Kecepatan lari meningkat 20%!");
+        if (getNama().equalsIgnoreCase("Alok")) {
+            System.out.println("[SKILL AKTIF] " + getNama() + " mengaktifkan '" + skillName + "'! Mendapatkan kecepatan berlari 20% dan memulihkan HP 10%!");
+        } else if (getNama().equalsIgnoreCase("Chronos")) {
+            System.out.println("[SKILL AKTIF] " + getNama() + " mengaktifkan '" + skillName + "'! Mendapatkan kecepatan berlari 20% dan perlindungan shield!");
+        } else {
+            System.out.println("[SKILL AKTIF] " + getNama() + " mengaktifkan '" + skillName + "'! Kecepatan lari meningkat 20%!");
+        }
     }
 
     @Override
